@@ -255,7 +255,7 @@ var cdTimer=0;
 function cd(k,f){var o=ITEMS[k],u=o&&o[f],L=lang=='ar';
  if(!u||u=='#'){toast(L?'لا يوجد رابط بعد':'No link yet');return false}
  if(!/^https?:\/\//i.test(u)){toast('رابط غير صالح');return false}
- var n=5,b=$('cdb');cdKey=o.n;cdHit=false;clearInterval(cdTimer);
+ var n=3 ,b=$('cdb');cdKey=o.n;cdHit=false;clearInterval(cdTimer);
  $('cdt').textContent=(L?'جاري تجهيز التحميل: ':'Preparing download: ')+(L?o.a:o.n);
  b.className='btn g';b.href='#';b.style.pointerEvents='none';b.textContent=L?'انتظر...':'Please wait...';
  $('cdn').textContent=n;$('cdw').classList.add('on');
